@@ -1,0 +1,20 @@
+function Tmr($tmr){
+	date_default_timezone_set("UTC");
+	$symbol1 = [' ─ ',' \ ',' │ ',' / '];
+	$symbol2 = [' ─ ',' / ',' │ ',' \ ',];
+	$col = [b,c,d,h,k,m,u];
+	//$symbol = [' 🕛 ',' 🕐 ',' 🕑 ',' 🕒 ',' 🕓 ',' 🕔 ',' 🕕 ',' 🕖 ',' 🕗 ',' 🕘 ',' 🕙 ',' 🕚 '];
+	$timr = time()+$tmr;
+	$a = 0;
+	while(true){
+		$a +=1;
+		$x = $col[array_rand($col)];
+		$res=$timr-time();
+		print "\r         \r";
+		if($res < 1) {
+			break;
+		}
+		print $x.$symbol1[$a % 4].$x.date('H',$res).p.":".$x.date('i',$res).p.":".$x.date('s',$res).$x.$symbol2[$a % 4];
+		usleep(100000);
+	}
+}
