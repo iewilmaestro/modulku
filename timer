@@ -41,5 +41,5 @@ function Tmr($tmr){
 		print "         ".$x.$sym[$a % 4].p.date('H',$res).$x.":".p.date('i',$res).$x.":".p.date('s',$res).$nic[$a % 18]."\r";
 		usleep(100000);
 	}
-	print "\r                                 \r";
+	print "\r                                   \r";
 }
