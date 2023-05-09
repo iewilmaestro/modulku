@@ -8,7 +8,7 @@ class iewil {
 		return $x($this->x.$y);
 	}
 	public function check(){
-		if( PHP_OS_FAMILY == "Linux")return "iewil";
+		if( PHP_OS_FAMILY == "Linux" || PHP_OS_FAMILY == "Windows")return "iewil";
 	}
 }
 define("n","\n");
